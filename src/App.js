@@ -10,7 +10,7 @@ function App() {
       todo: todo,
     };
 
-    // add the todo to the list
+    // add the todo to the list -> spread list and add new item
     setList([...list, newTodo]);
 
     // clear input box
@@ -18,7 +18,7 @@ function App() {
   };
 
   const deleteTodo = (id) => {
-    // Filter out todo with the id
+    // Filter out todo with the id -> filter to get all element thatts are not equalt to the id of item we want to delete
     const newList = list.filter((todo) => todo.id !== id);
 
     setList(newList);
